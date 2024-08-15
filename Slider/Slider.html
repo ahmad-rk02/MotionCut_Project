@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Slider.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="swiper main-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/aston-martin.jpg" alt="Aston Martin">
+                    <div class="caption">Aston Martin - Luxury and Performance</div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/audi-rs-e-tron-gt.jpg" alt="Audi RS E-Tron GT">
+                    <div class="caption">Audi RS E-Tron GT - Electric Power</div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/maserati-mc20.jpg" alt="Maserati MC20">
+                    <div class="caption">Maserati MC20 - Italian Excellence</div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/nio-et5.jpg" alt="NIO ET5">
+                    <div class="caption">NIO ET5 - The Future of Mobility</div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="swiper thumbnail-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/aston-martin.jpg" alt="Aston Martin Thumbnail">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/audi-rs-e-tron-gt.jpg" alt="Audi RS E-Tron GT Thumbnail">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/maserati-mc20.jpg" alt="Maserati MC20 Thumbnail">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/nio-et5.jpg" alt="NIO ET5 Thumbnail">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const mainSlider = new Swiper('.main-slider', {
+            loop: true,
+            fadeEffect: { crossFade: true },
+            effect: 'fade',
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        const thumbnailSlider = new Swiper('.thumbnail-slider', {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            slideToClickedSlide: true,
+        });
+
+        mainSlider.controller.control = thumbnailSlider;
+        thumbnailSlider.controller.control = mainSlider;
+    </script>
+</body>
+
+</html>

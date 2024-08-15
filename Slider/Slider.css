@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+}
+
+.swiper {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 10px;
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.thumbnail-slider {
+    height: 100px;
+}
+
+.thumbnail-slider .swiper-slide {
+    width: auto;
+    height: 100%;
+}
+
+.thumbnail-slider .swiper-slide img {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.thumbnail-slider .swiper-slide-active img {
+    opacity: 1;
+}
