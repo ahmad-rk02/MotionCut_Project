@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .product-page {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-details {
+            flex: 2;
+            margin-left: 20px;
+        }
+
+        .product-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e67e22;
+            margin-bottom: 20px;
+        }
+
+        .add-to-cart {
+            background-color: #e67e22;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: #d35400;
+        }
+
+        .additional-sections {
+            margin-top: 40px;
+        }
+
+        .reviews,
+        .related-products {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .reviews h3,
+        .related-products h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .related-products ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .related-products li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            width: 120px;
+        }
+
+        .related-products li img {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .related-products .product-name,
+        .related-products .product-price {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .product-page {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-details {
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="product-page">
+            <div class="product-image">
+                <img src="img1.png" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <h1 class="product-name">Office Formal Shoes Lace Up For Men  (Black , 9)</h1>
+                <p class="product-description">
+                    Color: Black, Inner material: PU, Outer material: Synthetic Leather, Model name: Office Formal Shoes, Ideal for: Men, Occasion: Formal, Heel Pattern: Embossed, Type For Formal: Lace Up, Net Quantity: 1, Sole material: PU, Closure: Lace-Ups, Weight: 500 g (per single Shoe) - Weight of the product may vary depending on size., Upper Pttern: Textured, Sales package: 2 Shoes, pack of: 1, Tip shape: Square, Season: EOSS-1-2023
+                </p>
+                <p class="product-price">₹898</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="additional-sections">
+            <div class="reviews">
+                <h3>Customer Reviews</h3>
+                <p>No reviews yet. Be the first to review this product!</p>
+            </div>
+
+            <div class="related-products">
+                <h3>Related Products</h3>
+                <ul>
+                    <li>
+                        <img src="img2.png" alt="Related Product 1">
+                        <p class="product-name">Casual Shoes</p>
+                        <p class="product-price">₹699</p>
+                    </li>
+                    <li>
+                        <img src="img3.png" alt="Related Product 2">
+                        <p class="product-name">Running Shoes</p>
+                        <p class="product-price">₹799</p>
+                    </li>
+                    <li>
+                        <img src="img4.png" alt="Related Product 3">
+                        <p class="product-name">Sports Shoes</p>
+                        <p class="product-price">₹999</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
